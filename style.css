@@ -19,20 +19,24 @@ body {
   justify-content: center; /* Center cards horizontally */
 }
 
-
+/* Timeline Card */
 .timeline-card {
-  border: 1px solid #ddd; /* Light border */
+  background-color: #00c7fd; /* Light background for contrast */
+  border: 1px solid #ddd; /* Subtle border for definition */
   border-radius: 8px; /* Rounded corners */
-  padding: 15px;
-  background-color: #00c7fd; /* White background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  padding: 16px;
+  width: 150px; /* Fixed width for consistency */
+  min-width: 150px; /* Ensure cards are at least 150px wide */
   text-align: center; /* Center-align text */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  transition: transform 0.3s, box-shadow 0.3s, width 0.3s; /* Add smooth transition for width */
 }
 
-/* Hover Effect - Only the hovered card has the effect */
+/* Hover Effect - Only the hovered card lengthens */
 .timeline-card:hover {
-  transform: scale(1.05); /* Slightly enlarge the hovered card */
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Stronger shadow for the hovered card */
+  transform: scale(1.05); /* Slightly enlarge card */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Enhance shadow */
+  width: 180px; /* Lengthen the hovered card */
 }
 
 /* Card Image */
