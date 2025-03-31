@@ -1,1 +1,148 @@
 /* Add your CSS here */
+
+/* Set the background color for the entire webpage */
+body {
+  background-color: #0071C5; /* Intel blue */
+  color: #fff; /* Ensure text is readable on the blue background */
+  margin: 0; /* Remove default margin */
+  font-family: 'Intel One Mono', monospace; /* Use Intel One Mono font */
+}
+
+/* Timeline Section */
+.timeline {
+  display: flex;
+  flex-wrap: wrap; /* Allows cards to stack on smaller screens */
+  gap: 10px; /* Space between cards */
+  padding: 16px;
+  padding-left: 50px; /* Add extra padding to allow more scrolling to the left */
+  padding-right: 15px; /* Add extra padding to allow more scrolling to the right */
+  justify-content: center; /* Center cards horizontally */
+}
+
+/* Timeline Card */
+.timeline-card {
+  background-color: #00c7fd; /* Light background for contrast */
+  border: 1px solid #ddd; /* Subtle border for definition */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  padding: 16px;
+  width: 150px; /* Fixed width for consistency */
+  min-width: 150px; /* Ensure cards are at least 150px wide */
+  text-align: center; /* Center-align text */
+  transition: transform 0.3s, box-shadow 0.3s, width 0.3s; /* Add smooth transition for width */
+}
+
+/* Hover Effect - Only the hovered card lengthens */
+.timeline-card:hover {
+  transform: scale(1.05); /* Slightly enlarge card */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Enhance shadow */
+  width: 180px; /* Lengthen the hovered card */
+}
+
+/* Card Image */
+.timeline-card img {
+  max-width: 100%; /* Ensure images fit within the card */
+  height: 100px; /* Set a fixed height for consistency */
+  width: 250px;
+  object-fit: cover; /* Ensure the image scales properly without distortion */
+  border-radius: 4px; /* Slight rounding for images */
+  margin-bottom: 8px; /* Space below image */
+}
+
+/* Card Headings */
+.timeline-card h2 {
+  font-size: 1.5em;
+  color: #0071c5; /* Intel blue */
+  margin-bottom: 8px;
+}
+
+.timeline-card h3 {
+  font-size: 1.2em;
+  color: #ffffff; /* Darker text for contrast */
+  margin-bottom: 8px;
+}
+
+/* Hide paragraph text by default */
+.timeline-card p {
+  display: none; /* Hide the text */
+}
+
+/* Show paragraph text on hover */
+.timeline-card:hover p {
+  display: block; /* Display the text when the card is hovered */
+}
+
+/* Center the text below the timeline */
+.timeline + p {
+  text-align: center; /* Center-align the text */
+  margin-top: 16px; /* Add spacing above the text */
+  font-size: 1em; /* Default font size */
+}
+
+/* Responsive Design for the text below the timeline */
+@media (min-width: 768px) {
+  .timeline + p {
+    font-size: 1.2em; /* Increase font size on larger screens */
+  }
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .timeline {
+    flex-wrap: nowrap; /* Prevent stacking on larger screens */
+    overflow-x: auto; /* Enable horizontal scrolling */
+  }
+}
+
+/* Hero Section */
+header div {
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center elements horizontally */
+  text-align: center; /* Center text */
+  padding: 16px; /* Add padding for spacing */
+}
+
+header img {
+  max-width: 40%; /* Reduce the width to 40% for a smaller logo */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 16px; /* Space below the logo */
+}
+
+header h1 {
+  font-size: 2em; /* Adjust heading size for better readability */
+  margin-bottom: 8px; /* Space below the heading */
+}
+
+header p {
+  font-size: 1em; /* Adjust paragraph size for readability */
+  line-height: 1.5; /* Improve text spacing */
+  max-width: 600px; /* Limit width for better readability */
+  margin: 0 auto; /* Center the paragraph */
+}
+
+/* Responsive Design for Hero Section */
+@media (min-width: 768px) {
+  header h1 {
+    font-size: 2.5em; /* Increase heading size on larger screens */
+  }
+
+  header p {
+    font-size: 1.2em; /* Increase paragraph size on larger screens */
+  }
+}
+
+/* Customize the scroll bar */
+::-webkit-scrollbar {
+  width: 10px; /* Set the width of the scrollbar */
+  height: 10px; /* Set the height of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #00c7fd; /* Set the color of the scrollbar thumb */
+  border-radius: 15px; /* Add rounded corners to the thumb */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ffffff; /* Set the color of the scrollbar track */
+}
